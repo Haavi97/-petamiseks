@@ -63,3 +63,10 @@ Kui sa oled seda juba ära teinud võid proovida teiste takistuste väärtuste v
 *R<sub>1</sub>* = *R<sub>2</sub>* = 220 Ω
 
 *R<sub>3</sub>* = 10 kΩ
+
+
+## Kuidas kasutada multimeetrit?
+
+Palun loe hoolikalt järgmist artiklit, kus on seletatud kuidas sa võid mõõta pinge, takistus kui ka voolutugevus multimeetri abiga:
+
+[Link artiklisse](https://www.metshein.com/unit/arduino-multimeetri-kasutamine/)
