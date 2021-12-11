@@ -1,11 +1,2 @@
-Tere!
-
-Vaga tore, et sa oled leidnud lahendus sellele. See tahendab, et saa kuulsid juttu ASCII kohta.
-Siis sa tead ka, et on moned tahed eesti tahestikus ei ole originaal ASCII tabelis. Selleparast puuduvad ka siin tekstis. 
-Kui sa oled nii kaugele joudnud siis kirjuta mulle tagasi sarnaselt viisil.
-Palun, ara utle teistele ka kuidas seda lahendada. Siis ei ole enam valjakutse. 
-
-Loodan, et sulle meeldis selline 'aardejaht'.
-
-Parimat,
-Opetaja
+Wow, leidsid päris kiiresti. Kuigi on keegi teine kes on ka seda juba leidnud ;)
+Muideks, veendu, et su tiimi kaaslased saavad ka kasutada ASCII-tolkendamise skripti. Tulevikus on see vaja.
