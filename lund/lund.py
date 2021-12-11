@@ -5,8 +5,8 @@ from jõulusõim import jõulusõim
 
 
 def main():
-    KÕRGUS = os.get_terminal_size()[1]
-    LAIUS = os.get_terminal_size()[0]
+    KÕRGUS = 24#os.get_terminal_size()[1]
+    LAIUS = 80#os.get_terminal_size()[0]
     TIHEDUS = 10
     UUENDAMIS_AEG = 0.3
 
@@ -24,7 +24,7 @@ def main():
         if lumehelves[0][1] >= KÕRGUS:
             lumehelves = lumehelves[TIHEDUS:]
         for i in range(len(lumehelves)):
-            ekraan[lumehelves[i][0]+lumehelves[i][1]*LAIUS] = '*'
+            ekraan[lumehelves[i][0]+lumehelves[i][1]*LAIUS] = '❄️'
             lumehelves[i][1] += 1
 
         os.system(clear)
