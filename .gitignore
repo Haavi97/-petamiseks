@@ -4,3 +4,4 @@ tagasi.txt
 väljund.txt
 *.html
 *.pptx
+.env
