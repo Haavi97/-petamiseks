@@ -10,6 +10,7 @@ from os import getenv
 from dotenv import load_dotenv, find_dotenv
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from test_handler import test
+from harjutused.harjuta import harjuta
 
 # Load env data
 load_dotenv(find_dotenv())
@@ -71,6 +72,7 @@ def main():
     dp.add_handler(CommandHandler("abi", abi))
     dp.add_handler(CommandHandler("kaja", kaja))
     dp.add_handler(CommandHandler("brauser", brauser))
+    dp.add_handler(CommandHandler("harjuta", harjuta))
     dp.add_handler(CommandHandler("test", test, pass_user_data=True))
 
     # on noncommand i.e message - echo the message on Telegram
