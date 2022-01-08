@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import os
 import logging
 import webbrowser
 from time import sleep
@@ -39,8 +40,11 @@ def start(update, context):
 
 def abi(update, context):
     """Send a message when the command /help is issued."""
-    update.message.reply_text(
-        'Siin peaks kirjutama abi sõnumit.')
+    kaust = os.path.dirname(os.path.realpath(__file__))
+    with open(kaust + os.sep + 'abi.md', 'rb') as abi_fail:
+        update.message.reply_text(
+            abi_fail.read().decode('utf-8'),
+            parse_mode='Markdown')
 
 
 def kaja(update, context):
