@@ -1,17 +1,19 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import sys
 import os
 import logging
+import traceback
 import webbrowser
-from time import sleep
 from os import getenv
+
 
 from dotenv import load_dotenv, find_dotenv
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from test_handler import test
 from harjutused.harjuta import harjuta
+from stats.stats import register_user
 
 # Load env data
 load_dotenv(find_dotenv())
@@ -32,6 +34,11 @@ logger = logging.getLogger(__name__)
 def start(update, context):
     """Send a message when the command /start is issued."""
     update.message.reply_text('Tere!')
+    try:
+        register_user(update['message']['chat'])
+    except:
+        logger.error('Could not register user. Traceback: ' +
+                     traceback.format_exc())
     logger.info('Started conversation\n\t\tUpdate:\n\t\t')
     logger.info(update)
     logger.info('\n\t\Context:\n\t\t')
