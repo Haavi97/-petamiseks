@@ -1,15 +1,7 @@
-import logging
-import sys
 
-# Enable logging
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    level=logging.INFO,
-                    handlers=[
-                        logging.FileHandler("debug.log"),
-                        logging.StreamHandler(sys.stdout)
-                    ])
+from utils.logger import get_logger
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 
 def test(update, context):

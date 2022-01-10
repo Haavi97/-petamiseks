@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import sys
 import os
-import logging
 import traceback
 import webbrowser
 from os import getenv
@@ -14,21 +12,14 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from test_handler import test
 from harjutused.harjuta import harjuta
 from stats.stats import register_user
+from utils.logger import get_logger
 
 # Load env data
 load_dotenv(find_dotenv())
 telegram_token = getenv('TELEGRAM_TOKEN')
 
-# Enable logging
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    level=logging.INFO,
-                    handlers=[
-                        logging.FileHandler("debug.log"),
-                        logging.StreamHandler(sys.stdout)
-                    ])
 
-logger = logging.getLogger(__name__)
-# logger.addHandler(logging.StreamHandler(sys.stdout))
+logger = get_logger(__name__)
 
 
 def start(update, context):

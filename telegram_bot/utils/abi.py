@@ -3,8 +3,8 @@ import json
 
 
 def get_json(fn, script=__file__):
-    f = open(get_local_path(fn, script))
-    return json.load(f)
+    with open(get_local_path(fn, script), 'rb') as f:
+        return json.loads(f.read().decode('utf-8'))
 
 
 def get_folder(script):

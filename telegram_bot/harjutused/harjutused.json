@@ -1,3 +1,18 @@
 {
-    "00_tase": ["00", "01", "02"]
+    "00_tase": [
+        "Koosta programm, mis küsib kasutajalt ristküliku lähiskülgede pikkused ning väljastab ekraanile ristküliku ümbermõõdu ja pindala",
+        "Koosta programm, mis küsib kasutajalt nime ja vanust ja väljastab ekraanile nimelise tervituse koos tekstiga, mis ütleb, kas tegemist on 7-18-aastase inimesega.",
+        "Kirjuta skripti, mis prindiks sellist mustrid. Ei tohi kopeerida mustrid ega käsitsi kirjutada:\n```bash\n1\n22\n333\n4444\n55555\n666666\n7777777\n88888888\n999999999```\n\nNt ei tohi järgmist kirjutada:\n\n```bashprint('1')\nprint('22')\nprint('333')```\njne\n",
+        "Kirjuta Python programmi mis kuvab praegune kuupäeva ja kellaega:\nNt:\nHetke kuupäeva ja kl:\n2014-07-05 14:34:14",
+        "Kirjuta programmi kätte saama Python versiooni, mis on hetkel kasutusel.\nVihje: kasuta ``` sys``` teek",
+        "Kirjuta Python programmi, mis aktsepteerib kasutaja ees- ja perekonnanimi ja prindib neid vastupidi. Nt:\n```bash\nInput: Meelis Puusepp\nOutput:\nPuusepp Meelis\n```",
+        "Kirjuta Python programmi, mis aktsepteerib kasutaja poolt sisestatud faili nimi ja prindib selle faili *extension* (ehk faili tüüp).\nNt:```bash\nInput: abc.java\nOutput :\njava```"
+    ],
+    "01_tase": [
+        "Kirjuta Python programmi, mis aktsepteerib kasutaja poolt sisestatud rida kommaga eraldaut arvud ja genereerib järjendi ning enniku nendega.\nNt:```bash\nInput: 3, 5, 7, 23\nOutput :\nJärjend : ['3', ' 5', ' 7', ' 23']\nEnnik : ('3', ' 5', ' 7', ' 23')```",
+        "Koosta programm, mis küsib kasutajalt temperatuuri Celsiuse kraadides ja väljastab tulemuse Fahrenheiti kraadides. Kuidas muuta programmi nii, et võimalik oleks teisendamine nii üht- kui teistpidi? Proovi."
+    ],
+    "02_tase": [
+        "Koosta lihtne kalkulaator. Kasutajalt küsitakse kaks arvu ja tehtemärk ning seejärel kuvatakse tehe koos vastusega. Näiteks:\n```bashSisestage esimene arv: 2\nSisestage teine arv: 3\nSisestage tehe: +\nTulemus: 2+3=5```"
+    ]
 }
