@@ -6,3 +6,5 @@ väljund.txt
 *.pptx
 .env
 *.log
+general_stats.json
+soovitused.json

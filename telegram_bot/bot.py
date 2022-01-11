@@ -3,7 +3,6 @@
 
 import os
 import traceback
-import webbrowser
 from os import getenv
 
 
@@ -11,6 +10,7 @@ from dotenv import load_dotenv, find_dotenv
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from test_handler import test
 from harjutused.harjuta import harjuta
+from soovitused.soovita import soovita
 from stats.stats import register_user
 from utils.logger import get_logger
 
@@ -24,7 +24,8 @@ logger = get_logger(__name__)
 
 def start(update, context):
     """Send a message when the command /start is issued."""
-    update.message.reply_text('Tere!')
+    update.message.reply_text('Tere! Võib kirjutada käsku ```/abi```',
+                              parse_mode='Markdown')
     try:
         register_user(update['message']['chat'])
     except:
@@ -52,7 +53,8 @@ def kaja(update, context):
 
 def brauser(update, context):
     """Rockroll õpilasi"""
-    webbrowser.open('https://www.youtube.com/watch?v=2QeGa3OhRsA')
+    update.message.reply_text('[midagi](https://www.youtube.com/watch?v=2QeGa3OhRsA)',
+                              parse_mode='Markdown')
 
 
 def error(update, context):
@@ -75,6 +77,7 @@ def main():
     dp.add_handler(CommandHandler("kaja", kaja))
     dp.add_handler(CommandHandler("brauser", brauser))
     dp.add_handler(CommandHandler("harjuta", harjuta))
+    dp.add_handler(CommandHandler("soovita", soovita))
     dp.add_handler(CommandHandler("test", test, pass_user_data=True))
 
     # on noncommand i.e message - echo the message on Telegram
