@@ -8,7 +8,7 @@ from os import getenv
 
 from dotenv import load_dotenv, find_dotenv
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-from test_handler import test
+from tests.test_handler import test
 from harjutused.harjuta import harjuta
 from soovitused.soovita import soovita
 from stats.stats import register_user
@@ -56,6 +56,10 @@ def brauser(update, context):
     update.message.reply_text('[midagi](https://www.youtube.com/watch?v=2QeGa3OhRsA)',
                               parse_mode='Markdown')
 
+def downloader(update, context):
+    update.message.reply_text('Ma loodan, et sa ei proovi mind nakata. Meil on juba piisavalt viirused päris maailmas. ')
+    test(update, context)
+
 
 def error(update, context):
     """Log Errors caused by Updates."""
@@ -82,6 +86,7 @@ def main():
 
     # on noncommand i.e message - echo the message on Telegram
     dp.add_handler(MessageHandler(Filters.text, kaja))
+    dp.add_handler(MessageHandler(Filters.document, downloader))
 
     # log all errors
     dp.add_error_handler(error)

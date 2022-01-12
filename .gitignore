@@ -8,3 +8,4 @@ väljund.txt
 *.log
 general_stats.json
 soovitused.json
+telegram_bot/tests/scripts/*
