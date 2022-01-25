@@ -29,7 +29,7 @@ def display_menu() -> None:
     print('\t3. Arvust tekstiks. Failid')
     print('\t4. Tekstist arvuks. Failid')
     print('\t5. Vaikimisi. Näide\n')
-    print('\t0, 1 või exit lõpetamiseks.\n')
+    print('\t0, q või exit lõpetamiseks.\n')
 
 
 if __name__ == '__main__':

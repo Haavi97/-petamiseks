@@ -1,7 +1,7 @@
 from random import randint
 from bitstring import BitArray
 
-def juhuslik_arv(maximum) -> str:
+def juhuslik_arv(maximum: int) -> str:
     return BitArray(hex(randint(0,maximum))).bin
 
 if __name__ == "__main__":
