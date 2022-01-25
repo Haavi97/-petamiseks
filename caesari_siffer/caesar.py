@@ -80,7 +80,7 @@ if __name__ == "__main__":
                 print(caesari_siffreri(kasutaja_sisend, int(kasutaja_nihe)))
                 print(caesari_siffreri_lihtsustatud(
                     kasutaja_sisend, int(kasutaja_nihe)))
-            elif kasutaja_sisend == '2':            
+            elif kasutaja_sisend == '2':
                 kasutaja_sisend = input(
                     '\nPalun, sisesta teksti dešifreerimiseks (tähed A-Z): ')
                 kasutaja_nihe = input(
