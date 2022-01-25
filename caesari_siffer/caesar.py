@@ -4,7 +4,8 @@ def caesari_siffreri(sõne: str, nihe: int) -> str:
     ASCII tabelis 65->90 ehk siis A-Z. See eirab kõik 
     arvud mis pole selles vahemikus
     """
-    return ''.join(map(lambda ta: chr(65 + (ta+nihe-65) % (91-65)),
+    # 65 + (ta+nihe-65) % 26 <- 65 + (ta+nihe-65) % (91-65)
+    return ''.join(map(lambda ta: chr(65 + (ta+nihe-65) % 26),
                    filter(lambda ta: 64 < ta < 91,
                           map(lambda t: ord(t),
                               sõne.upper()))))
@@ -16,7 +17,8 @@ def caesari_desiffreri(sõne: str, nihe: int) -> str:
     ASCII tabelis 65->90 ehk siis A-Z. See eirab kõik 
     arvud mis pole selles vahemikus
     """
-    return ''.join(map(lambda ta: chr(65 + (ta-nihe-65+(91-65)) % (91-65)),
+    # 65 + (ta-nihe-39) % 26) <- 65 + (ta-nihe-65+(91-65)) % (91-65)
+    return ''.join(map(lambda ta: chr(65 + (ta-nihe-39) % 26),
                    filter(lambda ta: 64 < ta < 91,
                           map(lambda t: ord(t),
                               sõne.upper()))))
