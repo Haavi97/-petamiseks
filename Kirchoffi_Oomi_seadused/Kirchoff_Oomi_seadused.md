@@ -19,7 +19,7 @@ Kuna *R<sub>2</sub>* ja *R<sub>3</sub>* on rööpühenduses:
 
 1/R<sub>23</sub> = 1/*R<sub>2</sub>* + 1/*R<sub>3</sub>*
 
-R<sub>23</sub> = (*R<sub>2</sub>*+*R<sub>3</sub>*)/*R<sub>2</sub>***R<sub>3</sub>*
+R<sub>23</sub> = *R<sub>2</sub>***R<sub>3</sub>*/(*R<sub>2</sub>*+*R<sub>3</sub>*)
 
 Eelmise skeemi saab lihtsustada nii:
 
